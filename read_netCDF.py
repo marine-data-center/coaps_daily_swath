@@ -142,18 +142,18 @@ def read(file_name):
     # Will hold the variable name as the key and its data as the value
     variable_dict = dict() 
     
-    print("\n")
-    print("Source:", source)
-    print("Grid Spacing:", grid_spacing)
-    print("Variables:")
+    # print("\n")
+    # print("Source:", source)
+    # print("Grid Spacing:", grid_spacing)
+    # print("Variables:")
     for var in ncdf_vars:
-        print("\t", var)
-        print("\t", "-"*len(var))
+        # print("\t", var)
+        # print("\t", "-"*len(var))
         if var not in variable_dict:
             # Loads the NetCDF array into a numpy array
             variable_dict[var]= ncdf_file.variables[var][:]  
-            print(variable_dict[var])
-            print("\n")
+            # print(variable_dict[var])
+            # print("\n")
     ncdf_file.close()
     return variable_dict
 
